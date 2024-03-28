@@ -1,0 +1,76 @@
+/* Homepage.css */
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+  
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+  
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+  
+.trending {
+    margin-top: 20px;
+}
+  
+.trending h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+  
+.trending-movies {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 movies per row */
+    grid-template-rows: repeat(3, auto); /* Limit to 3 rows */
+    gap: 20px;
+    justify-items: center; /* Center align items horizontally */
+}
+
+/* Animation for sliding in the movie cards */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for MovieCard component */
+.trending-movies .movie-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure each movie card takes the same width */
+    animation: slideIn 0.5s ease; /* Apply slideIn animation */
+}
+  
+.trending-movies .movie-card img {
+    width: 100%;
+    height: auto;
+}
+  
+.trending-movies .movie-card .movie-info {
+    padding: 10px;
+}
+  
+.trending-movies .movie-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+  
+.trending-movies .movie-card p {
+    margin: 0;
+    font-size: 1rem;
+}
