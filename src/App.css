@@ -265,9 +265,7 @@ header .nav-links li:last-child {
   transition: all 0.3s ease;
 }
 
-.movie-card:hover .inner-card-controls {
-  opacity: 1;
-}
+
 
 .ctrl-btn {
   color: #fefefe;
