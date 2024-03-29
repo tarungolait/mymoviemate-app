@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
-import Add from "./Add";
+import Search from "./Search";
 import "./Homepage.css"; // Import CSS file
-
 
 const Homepage = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -34,7 +33,7 @@ const Homepage = () => {
       <h1>Welcome to MyMovieMate!</h1>
       <p>Manage your movie watch list with ease.</p>
 
-      <Add />
+      <Search />
 
       <section className="trending">
         <h2>Trending Movies</h2>
